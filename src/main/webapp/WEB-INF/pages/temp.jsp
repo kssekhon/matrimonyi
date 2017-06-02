@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,9 +34,9 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-
- <%response.sendRedirect("index"); %>  
-
-
+      <?php include'include/nav.php'; ?>
+<!-- ============================  Navigation End ============================ -->
+ 
+   <?php include'include/footer.php'; ?>
 </body>
 </html>	

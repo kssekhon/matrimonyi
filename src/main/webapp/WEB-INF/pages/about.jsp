@@ -2,8 +2,13 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE HTML>
 <html>
+<!-- Developed by Kuldeep Singh
+email: mca.kuldeep.sekhon@gmail.com
+contact 919803242155
+India
+ -->
 <head>
-<title>Marital an Wedding Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<title>Marital an Wedding  Resposive Website| About</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -36,9 +41,10 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+     <%@include file="nav.jsp" %>
+<!-- ============================  Navigation End ============================ -->
 
- <%response.sendRedirect("index"); %>  
-
-
+ <%@include file="about_body.jsp" %>
+  <%@include file="footer.jsp" %>
 </body>
 </html>	

@@ -3,7 +3,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Marital an Wedding Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<!-- Developed by Kuldeep Singh
+email: mca.kuldeep.sekhon@gmail.com
+contact 919803242155
+India
+ -->
+<title>Marital an Wedding  Resposive Website  | Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -13,6 +18,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Developed by Kuldeep Singh
+email: mca.kuldeep.sekhon@gmail.com
+contact 919803242155
+India
+ -->
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
@@ -37,8 +47,11 @@ $(document).ready(function(){
 </head>
 <body>
 
- <%response.sendRedirect("index"); %>  
+   
+     <%@include file="nav.jsp" %>
+<!-- ============================  Navigation End ============================ -->
+<%@include file="home_search.jsp" %>
 
-
+  <%@include file="footer.jsp" %>
 </body>
 </html>	

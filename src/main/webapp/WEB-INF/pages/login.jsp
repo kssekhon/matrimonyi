@@ -3,7 +3,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Marital an Wedding Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<!-- Developed by Kuldeep Singh
+email: mca.kuldeep.sekhon@gmail.com
+contact 919803242155
+India
+ -->
+<title>Marital an Wedding  Resposive Website| Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -37,8 +42,10 @@ $(document).ready(function(){
 </head>
 <body>
 
- <%response.sendRedirect("index"); %>  
+     <%@include file="nav.jsp" %>
+<!-- ============================  Navigation End ============================ -->
 
-
+ <%@include file="login_body.jsp" %>
+  <%@include file="footer.jsp" %>
 </body>
 </html>	
