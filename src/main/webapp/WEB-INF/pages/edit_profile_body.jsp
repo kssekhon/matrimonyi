@@ -445,7 +445,7 @@ while(rs.next()){
     <div class="col-sm-7 form_radios">
       <div class="select-block1">
         <select name="cast">
-		<option value='<%=rs.getString("caste") %>'><%=rs.getString("cast") %></option>
+		<option value='<%=rs.getString("caste") %>'><%=rs.getString("caste") %></option>
             <option value="Ramgariah">Ramgariah</option>
             <option value="Dhiman">Dhiman</option>
             <option value="Sharma">Sharma</option>
