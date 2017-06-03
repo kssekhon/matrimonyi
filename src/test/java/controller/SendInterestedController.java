@@ -47,7 +47,7 @@ public class SendInterestedController extends HttpServlet {
 
 		Connection conn = DbUtil.getConnection();
 		HttpSession session = request.getSession();
-		int from_id = (int) session.getAttribute("id");
+		int from_id = Integer.parseInt((String)session.getAttribute("id"));
 		String sql1 = "select * from intrust where to_id=? and from_id=?";
 		
 		String sql2="insert into  intrust(to_id,from_id,send_date)values(?,?,?)";
