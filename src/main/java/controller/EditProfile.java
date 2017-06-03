@@ -22,7 +22,7 @@ import database.DbUtil;
 /**
  * Servlet implementation class MessageController
  */
-@WebServlet(urlPatterns={"/user/editprofile","/profile"})
+@WebServlet(urlPatterns={"/user/editprofile"})
 @MultipartConfig
 public class EditProfile extends HttpServlet {
 	private static final long serialVersionUID = 1L;

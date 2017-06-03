@@ -38,7 +38,7 @@ public class userprofile extends HttpServlet {
 		Connection conn=DbUtil.getConnection();
 		ResultSet rs=null;
 		HttpSession session=request.getSession();
-		int id = (int)session.getAttribute("id");
+		String id =(session.getAttribute("id")).toString();
 		
 		try {
 			PreparedStatement stmt=conn.prepareStatement("select * from members where id='"+id+"'");
