@@ -105,7 +105,7 @@ while(rs.next()){
 		      <div class="col-sm-7 form_radios">
 		         <div class="select-block1">
 		      
-		      <input type="file" id="address" name="image1" value='<%=rs.getString("image1") %>' size="60" maxlength="60" class="form-control has-dark-background">
+		      <input type="file" id="address" name="image1" value='' size="60" maxlength="60" class="form-control has-dark-background">
 		   </div>
 		   </div>
 		   <div class="clearfix"> </div>
