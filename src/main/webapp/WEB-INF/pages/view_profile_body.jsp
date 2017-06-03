@@ -170,7 +170,7 @@ while(rs.next()){
 								</tr>
 				        		<tr class="opened">
 									<td class="day_label">Caste :</td>
-									<td class="day_value"><%=rs.getString("cast") %></td>
+									<td class="day_value"><%=rs.getString("caste") %></td>
 								</tr>
 							    <tr class="opened">
 									<td class="day_label">Date of Birth :</td>

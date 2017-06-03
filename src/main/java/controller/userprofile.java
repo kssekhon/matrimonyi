@@ -39,7 +39,6 @@ public class userprofile extends HttpServlet {
 		ResultSet rs=null;
 		HttpSession session=request.getSession();
 		String id =(session.getAttribute("id")).toString();
-		
 		try {
 			PreparedStatement stmt=conn.prepareStatement("select * from members where id='"+id+"'");
 			 rs=stmt.executeQuery();
