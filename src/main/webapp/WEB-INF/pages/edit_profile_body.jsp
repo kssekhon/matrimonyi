@@ -90,17 +90,17 @@ while(rs.next()){
 		   </div>
 		   <div class="clearfix"> </div>
 		    </div>
-			<div class="form_but1">
-		      <label for="mobile" class="col-sm-5 control-lable1">Father Name </label>
+
+		    			<div class="form_but1">
+		      <label for="mobile" class="col-sm-5 control-lable1">Image1 </label>
 		      <div class="col-sm-7 form_radios">
 		         <div class="select-block1">
 		      
-		      <input type="text" id="password" name="fathername" value='<%=rs.getString("father_name") %>' size="60" maxlength="60" class="form-control has-dark-background">
+		      <input type="file" id="address" name="image1"  size="60" maxlength="60" class="form-control has-dark-background">
 		   </div>
 		   </div>
 		   <div class="clearfix"> </div>
 		    </div>
-
 			<div class="form_but1">
 		      <label for="mobile" class="col-sm-5 control-lable1">Address </label>
 		      <div class="col-sm-7 form_radios">
