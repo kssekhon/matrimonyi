@@ -50,6 +50,7 @@ public class RegisterController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String msg="";
+		int i=0;
 		PrintWriter out=response.getWriter();
 		String sql="insert into members(first_name,middle_name,last_name,email,password,dob,gender)values(?,?,?,?,?,?,?)";
 		String middle_name=request.getParameter("middle_name");
@@ -90,14 +91,16 @@ public class RegisterController extends HttpServlet {
 			
 			stmt.setString(6,ddob);
 			stmt.setString(7,gender);
-			int i=stmt.executeUpdate();
-		
-		 msg="Congratualtions you have registred successfully";
-		
+			 i=stmt.executeUpdate();
+					
 		} catch (SQLException e) {
 			msg="Failed to create user";
 			e.printStackTrace();
 		}	
+		if(i>0){
+			 msg="Congratualtions you have registred successfully";
+	response.sendRedirect("login?msg=succ");
+		}else{response.sendRedirect("register?msg=fail");}
 	}
 	
 
