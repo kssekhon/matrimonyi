@@ -45,7 +45,7 @@ public class AcceptInterstController extends HttpServlet {
 
 				Connection conn = DbUtil.getConnection();
 				HttpSession session = request.getSession();
-				int to_id = (int) session.getAttribute("id");		
+				int to_id = Integer.parseInt((String) session.getAttribute("id"));		
 				PreparedStatement stmt;
 				try {
 					stmt = conn.prepareStatement(sql);
