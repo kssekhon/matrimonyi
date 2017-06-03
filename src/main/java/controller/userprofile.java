@@ -38,13 +38,14 @@ public class userprofile extends HttpServlet {
 		Connection conn=DbUtil.getConnection();
 		ResultSet rs=null;
 		HttpSession session=request.getSession();
-		int id = Integer.parseInt((String)session.getAttribute("id"));
+		String ids = (String)session.getAttribute("id");
+		int id=Integer.parseInt(ids);
 		try {
 			PreparedStatement stmt=conn.prepareStatement("select * from members where id="+id);
 			 rs=stmt.executeQuery();
 			
 		}catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		request.setAttribute("rs",rs);
 		request.getRequestDispatcher("//WEB-INF//pages//view_profile.jsp").forward(request, response);

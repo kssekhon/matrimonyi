@@ -122,7 +122,7 @@ public class EditProfile extends HttpServlet {
 					+"',father_name='"+father_name
 					+"',marital_status='"+marital_status
 					+"',country='"+country
-					+"',state='"+state
+					+"',stat='"+state
 					+"',city='"+city
 					+"',email='"+email
 					+"',address='"+address
