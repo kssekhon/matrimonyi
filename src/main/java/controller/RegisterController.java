@@ -52,7 +52,7 @@ public class RegisterController extends HttpServlet {
 		String msg="";
 		int i=0;
 		PrintWriter out=response.getWriter();
-		String sql="insert into members(first_name,middle_name,last_name,email,password,dob,gender)values(?,?,?,?,?,?,?)";
+		String sql="insert into members(first_name,middle_name,last_name,email,password,gender)values(?,?,?,?,?,?)";
 		String middle_name=request.getParameter("middle_name");
 		String first_name=request.getParameter("first_name");
 		String last_name=request.getParameter("last_name");
@@ -69,7 +69,7 @@ public class RegisterController extends HttpServlet {
 		out.write(day+"<br>");
 		out.write(month+"<br>");
 		out.write(year+"<br>");
-		String dob= year+"-"+month+"-"+day;
+		/*String dob= year+"-"+month+"-"+day;
 		SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-mm-dd");
 		Date udob=null;
 		try {
@@ -78,7 +78,7 @@ public class RegisterController extends HttpServlet {
 			
 			e1.printStackTrace();
 		}
-		String ddob= dateFormat.format(udob);
+		String ddob= dateFormat.format(udob);*/
 		String gender=request.getParameter("gender");
 		Connection conn=DbUtil.getConnection();
 		try {
@@ -89,18 +89,18 @@ public class RegisterController extends HttpServlet {
 			stmt.setString(4,email);
 			stmt.setString(5,password);
 			
-			stmt.setString(6,ddob);
-			stmt.setString(7,gender);
+			//stmt.setString(6,ddob);
+			stmt.setString(6,gender);
 			 i=stmt.executeUpdate();
 					
 		} catch (SQLException e) {
 			msg="Failed to create user";
-			e.printStackTrace();
+			out.write(e.getMessage());
 		}	
 		if(i>0){
 			 msg="Congratualtions you have registred successfully";
 	response.sendRedirect("login?msg=succ");
-		}else{response.sendRedirect("register?msg=fail");}
+		}//else{response.sendRedirect("register?msg=fail");}
 	}
 	
 
