@@ -12,12 +12,12 @@ ResultSet rs=(ResultSet)request.getAttribute("rs");
  
 while(rs.next()){
 %>
-<div class="grid_3">
+
   <div class="container">
    <div class="breadcrumb1">
      <ul>
-        <a href="index.html"><i class="fa fa-home home_1"></i></a>
-        <span class="divider">&nbsp;|&nbsp;</span>
+        
+      
         <li class="current-page">Complete /Edit your Profile</li>
      </ul>
    </div>
@@ -31,7 +31,7 @@ while(rs.next()){
    </script>-->
 <div class="col-md-9 search_left">
   <form method="post" action='dashboard?action=edit&id=<%=rs.getInt("id") %>'>	
-  <h2>Basics & Lifestyle</h2>
+  <h2>Basics And Lifestyle</h2>
   <div class="clearfix"> </div>
    <div class="form_but1">
 		      <label for="edit-name" class="col-sm-5 control-lable1">User Id </label>
@@ -54,7 +54,7 @@ while(rs.next()){
 		   <div class="clearfix"> </div>
 		    </div>
 		    <div class="form_but1">
-		      <label for="edit-name" class="col-sm-5 control-lable1">Middel name </span></label>
+		      <label for="edit-name" class="col-sm-5 control-lable1">Middel name</label>
 		     <div class="col-sm-7 form_radios">
 		        <div class="select-block1">
 		     
@@ -102,7 +102,16 @@ while(rs.next()){
 		   </div>
 		   <div class="clearfix"> </div>
 		    </div>
-		
+			<div class="form_but1">
+		      <label for="mobile" class="col-sm-5 control-lable1">Father Name </label>
+		      <div class="col-sm-7 form_radios">
+		         <div class="select-block1">
+		      
+		      <input type="text" id="password" name="fathername" value='<%=rs.getString("father_name") %>' size="60" maxlength="60" class="form-control has-dark-background">
+		   </div>
+		   </div>
+		   <div class="clearfix"> </div>
+		    </div>
 			<div class="form_but1">
 		      <label for="mobile" class="col-sm-5 control-lable1">Address </label>
 		      <div class="col-sm-7 form_radios">
