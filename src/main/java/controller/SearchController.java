@@ -65,7 +65,7 @@ public class SearchController extends HttpServlet {
 			}
 			Connection conn=DbUtil.getConnection();
 			try {
-			PreparedStatement stmt=conn.prepareStatement("select * from members where gender=? and(marital_status like ? or city like ? or state like ? or religion like ? or mother_tongue like ?)");
+			PreparedStatement stmt=conn.prepareStatement("select * from members where gender=? and(marital_status like ? or city like ? or stat like ? or religion like ? or mother_tongue like ?)");
 			
 				stmt.setString(1,gender);
 				stmt.setString(2,marital_status);
